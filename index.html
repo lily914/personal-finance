@@ -458,8 +458,8 @@
                     };
                     
                     setTimeout(() => {
-                        // 这里实际项目中会跳转到dashboard.html
-                        alert('登录成功！在实际项目中将跳转到仪表板页面');
+                        //仪表盘
+                       window.location.href = 'dashboard.html';
                     }, 1500);
                 } else {
                     showAlert('邮箱或密码错误，请重试');
@@ -473,7 +473,7 @@ please retry later');
             }
         });
 
-        // 输入框焦点效果
+        // 输入框效果
         const inputs = document.querySelectorAll('input');
         inputs.forEach(input => {
             input.addEventListener('focus', () => {
@@ -485,7 +485,7 @@ please retry later');
             });
         });
 
-        // 忘记密码处理
+        // 忘记密码
         document.getElementById('forgotPassword').addEventListener('click', (e) => {
             e.preventDefault();
             showAlert('忘记密码功能正在开发中...', 'success');
@@ -509,3 +509,4 @@ please retry later');
     </script>
 </body>
 </html>
+
